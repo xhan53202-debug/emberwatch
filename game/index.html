@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a0e1a">
+  <title>Emberwatch — Night Keeper</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+    body {
+      display: grid;
+      place-items: center;
+      background: #04060b;
+      color: #eee1c8;
+      font-family: Georgia, serif;
+    }
+    canvas {
+      display: block;
+      touch-action: none;
+      outline: none;
+      cursor: crosshair;
+      box-shadow: 0 0 90px #000;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="game" width="960" height="540" tabindex="0"
+    aria-label="Emberwatch. Move with WASD, arrows, or hold the pointer. Aim with the mouse. Space or click lights a nearby brazier.">
+  </canvas>
+  <p id="status" class="sr-only" aria-live="polite" aria-atomic="true">
+    Emberwatch. Press Enter or click to begin.
+  </p>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
